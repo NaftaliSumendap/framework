@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Alat Musik</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+              <div class="flex items-center">
+                  <a href="index.html" class="text-2xl font-bold text-gray-800">Toko Alat Musik</a>
+              </div>
+              <div class="flex-1 mx-4 max-w-lg">
+                  <div class="relative">
+                      <input type="text" placeholder="Cari alat musik..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                      <button class="absolute right-0 top-0 mt-2 mr-3 text-gray-500 hover:text-blue-500">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/></svg>
+                      </button>
+                  </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                  <a href="profil.html" class="text-gray-800 hover:text-blue-500">Profil</a>
+                  <a href="sign-in.html" class="text-gray-800 hover:text-blue-500">Masuk</a>
+                  <a href="sign-up.html" class="text-gray-800 hover:text-blue-500">Daftar</a>
+                  <a href="#" class="text-gray-800 hover:text-blue-500">Keranjang</a>
+              </div>
+          </div>
+      </div>
+    </nav>
+
+    <!-- Main Content with User Profile -->
+    <div class="pt-16 container mx-auto px-4">
+        <!-- User Name and Icon -->
+        <div class="flex items-center mt-4 ml-4">
+            <svg class="h-5 w-5 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+            <span class="text-gray-700">Andro</span>
+        </div>
+
+        <!-- Profile Navigation Tabs -->
+        <div class="border-b border-gray-200 mt-6">
+            <nav class="flex">
+                <a href="#" class="px-4 py-2 text-sm font-medium text-green-600 border-b-2 border-green-500">Biodata Diri</a>
+                <a href="#" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Daftar Alamat</a>
+                <a href="#" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Pembayaran</a>
+                <a href="#" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Rekening Bank</a>
+                <a href="#" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Notifikasi</a>
+                <a href="#" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Mode Tampilan</a>
+                <a href="#" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Keamanan</a>
+            </nav>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="mt-6 bg-white rounded-lg shadow-sm p-6">
+            <div class="flex flex-col md:flex-row">
+                <!-- Left Side - Profile Image -->
+                <div class="md:w-1/3 mb-6 md:mb-0">
+                    <h2 class="text-lg font-medium text-gray-700 mb-4">Ubah Biodata Diri</h2>
+                    <div class="flex flex-col items-center">
+                        <div class="w-40 h-40 bg-red-300 rounded-lg overflow-hidden mb-2">
+                            <!-- Profile Image -->
+                            <img src="https://via.placeholder.com/150/FFA07A/000000/?text=:)" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                        <button class="bg-white text-gray-700 border border-gray-300 rounded-md px-4 py-2 text-sm mt-2 w-full">Pilih Foto</button>
+                        <p class="text-xs text-gray-500 mt-2 text-center">Besaran file: maksimum 10.000.000 bytes (10 Megabytes). Ekstensi file yang diperbolehkan: .JPG .JPEG .PNG</p>
+                    </div>
+                </div>
+
+                <!-- Right Side - Personal Information -->
+                <div class="md:w-2/3 md:pl-8">
+                    <div class="mb-8">
+                        <h2 class="text-lg font-medium text-gray-700 mb-4">Ubah Biodata Diri</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Nama</span>
+                                <div class="flex items-center">
+                                    <span class="text-gray-700 mr-2">Andro Lay</span>
+                                    <a href="#" class="text-green-500 text-sm">Ubah</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Tanggal Lahir</span>
+                                <div class="flex items-center">
+                                    <a href="#" class="text-green-500 text-sm">Tambah Tanggal Lahir</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Jenis Kelamin</span>
+                                <div class="flex items-center">
+                                    <a href="#" class="text-green-500 text-sm">Tambah Jenis Kelamin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-lg font-medium text-gray-700 mb-4">Ubah Kontak</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Email</span>
+                                <div class="flex items-center">
+                                    <span class="text-gray-700 mr-2">androlay30@gmail.com</span>
+                                    <span class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded mr-2">Terverifikasi</span>
+                                    <a href="#" class="text-green-500 text-sm">Ubah</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Nomor HP</span>
+                                <div class="flex items-center">
+                                    <span class="text-gray-700 mr-2">62895397323281</span>
+                                    <span class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded mr-2">Terverifikasi</span>
+                                    <a href="#" class="text-green-500 text-sm">Ubah</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md mt-8">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Tentang Kami</h3>
+                    <p class="mt-2 text-gray-600">Toko Alat Musik terbaik dengan kualitas terjamin.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Layanan</h3>
+                    <ul class="mt-2 text-gray-600">
+                        <li><a href="#" class="hover:text-blue-500">Bantuan</a></li>
+                        <li><a href="#" class="hover:text-blue-500">Panduan Belanja</a></li>
+                        <li><a href="#" class="hover:text-blue-500">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Hubungi Kami</h3>
+                    <ul class="mt-2 text-gray-600">
+                        <li>Email: info@tokomusik.com</li>
+                        <li>Telepon: +62123456789</li>
+                    </ul>
+                </div>
+                <div>
+                <h3 class="text-lg font-semibold text-gray-800">Ikuti Kami</h3>
+                    <ul class="mt-2 text-gray-600">
+                        <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
+                        <li><a href="#" class="hover:text-blue-500">Twitter</a></li>
+                        <li><a href="#" class="hover:text-blue-500">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
