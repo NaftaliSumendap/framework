@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store - AdminHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans text-gray-800">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="w-72 bg-gray-50 p-4 shadow-md">
+        <div class="flex items-center mb-10">
+          <i class="bx bxs-smile text-amber-400 text-2xl mr-2"></i>
+          <span class="text-2xl font-bold text-amber-400">AdminHub</span>
+        </div>
+        <nav>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="dashboard.html"
+                class="flex items-center p-3 hover:text-amber-400"
+                ><i class="bx bxs-dashboard mr-2"></i>Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="store.html"
+                class="flex items-center bg-gray-100 text-amber-400 p-3 rounded-full"
+                ><i class="bx bxs-shopping-bag-alt mr-2"></i>My Store</a
+              >
+            </li>
+            <li>
+              <a
+                href="orders.html"
+                class="flex items-center p-3 hover:text-amber-400"
+                ><i class="bx bxs-cart-alt mr-2"></i>Orders</a
+              >
+            </li>
+            <li>
+              <a
+                href="transactions.html"
+                class="flex items-center p-3 hover:text-amber-400"
+                ><i class="bx bxs-credit-card mr-2"></i>Transactions</a
+              >
+            </li>
+            <li>
+              <a
+                href="users.html"
+                class="flex items-center p-3 hover:text-amber-400"
+                ><i class="bx bxs-user mr-2"></i>Users</a
+              >
+            </li>
+          </ul>
+          <div class="mt-10 border-t pt-4">
+            <a href="#" class="flex items-center p-3 hover:text-amber-400"
+              ><i class="bx bxs-cog mr-2"></i>Settings</a
+            >
+            <a href="#" class="flex items-center p-3 text-red-600"
+              ><i class="bx bxs-log-out-circle mr-2"></i>Logout</a
+            >
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center bg-gray-50 p-4 shadow">
+          <i id="toggleSidebar" class="bx bx-menu text-xl cursor-pointer"></i>
+          <form
+            class="flex items-center bg-gray-100 rounded-full overflow-hidden"
+          >
+            <input
+              type="text"
+              class="px-4 py-2 bg-transparent outline-none"
+              placeholder="Search..."
+            />
+            <button class="bg-amber-400 text-white px-4 py-2">
+              <i class="bx bx-search"></i>
+            </button>
+          </form>
+          <div class="flex items-center space-x-4">
+            <a href="#" class="relative">
+              <i class="bx bxs-bell text-xl"></i>
+              <span
+                class="absolute -top-2 -right-2 text-xs bg-amber-400 text-white rounded-full w-5 h-5 flex items-center justify-center"
+                >3</span
+              >
+            </a>
+            <img
+              src="img/people.png"
+              class="w-9 h-9 rounded-full"
+              alt="Profile"
+            />
+          </div>
+        </nav>
+
+        <!-- Page Content -->
+        <main class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <h1 class="text-2xl font-bold">My Store</h1>
+              <div class="text-sm text-gray-500">
+                Dashboard > <span class="text-amber-400">Store</span>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="flex items-center bg-amber-400 text-white px-4 py-2 rounded-full hover:bg-amber-500"
+            >
+              <i class="bx bx-plus mr-2"></i> Tambah Produk
+            </a>
+          </div>
+
+          <!-- Product Table -->
+          <div class="bg-white p-4 rounded shadow">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-lg font-semibold">Daftar Produk</h3>
+              <div class="space-x-2 text-gray-500">
+                <i class="bx bx-search"></i>
+                <i class="bx bx-filter"></i>
+              </div>
+            </div>
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="text-gray-600 border-b">
+                  <th class="py-2">Nama Produk</th>
+                  <th>Harga</th>
+                  <th>Stok</th>
+                  <th>Kategori</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2">Pukis Coklat</td>
+                  <td>Rp 10.000</td>
+                  <td>50</td>
+                  <td>Jajanan</td>
+                  <td class="space-x-2">
+                    <button
+                      class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600"
+                    >
+                      <i class="bx bxs-edit"></i>
+                    </button>
+                    <button
+                      class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                    >
+                      <i class="bx bxs-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2">Pukis Keju</td>
+                  <td>Rp 12.000</td>
+                  <td>30</td>
+                  <td>Jajanan</td>
+                  <td class="space-x-2">
+                    <button
+                      class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600"
+                    >
+                      <i class="bx bxs-edit"></i>
+                    </button>
+                    <button
+                      class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                    >
+                      <i class="bx bxs-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("toggleSidebar")
+        ?.addEventListener("click", () => {
+          document.getElementById("sidebar")?.classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>
