@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Konsumen dan Penjual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index_guest.html" class="text-2xl font-bold text-gray-800">Toko Alat Musik</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chat Section -->
+    <div class="pt-20 container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Chat dengan Penjual</h2>
+    
+        <!-- Chat Box -->
+        <div class="bg-white rounded-lg shadow-md p-6 h-[500px] overflow-y-auto">
+            <!-- Pesan Penjual -->
+            <div class="flex items-start mb-2">
+                <img src="../image/seller-avatar.png" alt="Penjual" class="w-8 h-8 rounded-full mr-2">
+                <div class="bg-amber-400 text-white px-4 py-2 rounded-tr-lg rounded-bl-lg max-w-md break-words">
+                    Selamat datang! Ada yang bisa saya bantu?
+                </div>
+            </div>
+    
+            <!-- Pesan Konsumen -->
+            <div class="flex items-end justify-end mb-2">
+                <div class="bg-gray-200 text-gray-800 px-4 py-2 rounded-tl-lg rounded-br-lg max-w-md break-words">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+                <img src="../image/customer-avatar.png" alt="Konsumen" class="w-8 h-8 rounded-full ml-2">
+            </div>
+    
+            <!-- Pesan Penjual -->
+            <div class="flex items-start mb-2">
+                <img src="../image/seller-avatar.png" alt="Penjual" class="w-8 h-8 rounded-full mr-2">
+                <div class="bg-amber-400 text-white px-4 py-2 rounded-tr-lg rounded-bl-lg max-w-md break-words">
+                    Ya, gitar Yamaha tersedia. Apakah Anda ingin memesan? Kami juga memiliki berbagai pilihan gitar lainnya yang mungkin menarik bagi Anda.
+                </div>
+            </div>
+        </div>
+    
+        <!-- Input Chat -->
+        <div class="mt-4 flex items-center">
+            <input type="text" placeholder="Ketik pesan..." class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button class="ml-2 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Kirim</button>
+        </div>
+    </div>
+
+</body>
+</html>
