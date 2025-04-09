@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaksi - Toko Alat Musik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800"
+              >Toko Alat Musik</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <a href="chat.html" class="text-gray-800 hover:text-amber-400">
+              <i class="bx bx-message-dots text-xl"></i>
+            </a>
+            <a href="cart.html" class="text-gray-800 hover:text-amber-400">
+              <i class="bx bx-cart text-xl"></i>
+            </a>
+            <a href="profil.html" class="flex items-center space-x-2 group">
+              <span
+                class="text-gray-800 font-medium group-hover:text-amber-400 transition"
+                >Andro Lay</span
+              >
+              <img
+                src="../image/Foto Almamater Andro.png"
+                alt="Profile"
+                class="w-9 h-9 rounded-full object-cover border-2 border-gray-300 group-hover:border-amber-400"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Konten -->
+    <main class="pt-20 pb-12 px-4 md:px-10">
+      <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+          Ringkasan Transaksi
+        </h2>
+
+        <!-- Informasi Transaksi -->
+        <div class="mb-6 text-sm text-gray-600 space-y-1">
+          <p><strong>Tanggal Pesanan:</strong> 10 April 2025</p>
+          <p>
+            <strong>Alamat Pengiriman:</strong> Jl. Melodi Indah No. 123,
+            Jakarta Selatan, DKI Jakarta 12430
+          </p>
+          <p><strong>Estimasi Sampai:</strong> 16 April - 18 April 2025</p>
+        </div>
+
+        <!-- Daftar Produk -->
+        <div class="space-y-6">
+          <div
+            class="flex items-center justify-between border-b border-t-2 pt-6 pb-6"
+          >
+            <div class="flex items-center space-x-4">
+              <img
+                src="../image/gitar.jpg"
+                alt="Gitar"
+                class="w-20 h-20 object-cover rounded border"
+              />
+              <div>
+                <h3 class="font-semibold text-gray-700">
+                  Gitar Akustik Yamaha C40
+                </h3>
+                <p class="text-sm text-gray-500">Jumlah: 1</p>
+              </div>
+            </div>
+            <p class="font-bold text-gray-800">Rp 1.500.000</p>
+          </div>
+
+          <div class="flex items-center justify-between border-b pb-4">
+            <div class="flex items-center space-x-4">
+              <img
+                src="../image/drum.jpg"
+                alt="Drum"
+                class="w-20 h-20 object-cover rounded border"
+              />
+              <div>
+                <h3 class="font-semibold text-gray-700">
+                  Drum Set Pearl Export
+                </h3>
+                <p class="text-sm text-gray-500">Jumlah: 1</p>
+              </div>
+            </div>
+            <p class="font-bold text-gray-800">Rp 15.000.000</p>
+          </div>
+        </div>
+
+        <!-- Total -->
+        <div class="flex justify-between items-center mt-6 border-t pt-4">
+          <h4 class="text-lg font-semibold text-gray-700">Total Pembayaran</h4>
+          <p class="text-xl font-bold text-amber-500">Rp 16.500.000</p>
+        </div>
+
+        <!-- Form Pembayaran -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-4 text-gray-800">
+            Pilih Metode Pembayaran
+          </h3>
+          <form action="#" method="POST" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="metode"
+                  value="bank"
+                  class="accent-amber-400"
+                  checked
+                />
+                <span>Transfer Bank</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="metode"
+                  value="cod"
+                  class="accent-amber-400"
+                />
+                <span>Cash on Delivery (COD)</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="metode"
+                  value="gopay"
+                  class="accent-amber-400"
+                />
+                <span>GoPay (via Midtrans)</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="metode"
+                  value="qris"
+                  class="accent-amber-400"
+                />
+                <span>QRIS (via Midtrans)</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="metode"
+                  value="va_bca"
+                  class="accent-amber-400"
+                />
+                <span>Virtual Account BCA (via Midtrans)</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="metode"
+                  value="va_bni"
+                  class="accent-amber-400"
+                />
+                <span>Virtual Account BNI (via Midtrans)</span>
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-amber-400 text-white py-2 rounded hover:bg-amber-500 transition"
+            >
+              Lanjutkan Pembayaran
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 mt-12">
+      <div class="container mx-auto px-6 py-8 text-slate-300 text-sm">
+        <p>&copy; 2025 Toko Alat Musik. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>
