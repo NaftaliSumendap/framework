@@ -106,7 +106,7 @@
           <h3 class="text-lg font-semibold mb-4 text-gray-800">
             Pilih Metode Pembayaran
           </h3>
-          <form action="#" method="POST" class="space-y-4">
+          <form action="#" method="POST" class="space-y-4" id="paymentForm">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <label class="flex items-center space-x-2">
                 <input
@@ -165,23 +165,100 @@
               </label>
             </div>
             <button
-              type="submit"
+              type="button"
+              onclick="processPayment()"
               class="w-full bg-amber-400 text-white py-2 rounded hover:bg-amber-500 transition"
             >
-              Lanjutkan Pembayaran
+              Konfirmasi Pembayaran
             </button>
           </form>
         </div>
       </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-800 mt-12">
-      <div class="container mx-auto px-6 py-8 text-slate-300 text-sm">
-        <p>&copy; 2025 Toko Alat Musik. All rights reserved.</p>
+<!-- Footer -->
+<footer class="bg-slate-800 shadow-md mt-8">
+  <div class="container mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div>
+        <h3 class="text-lg font-semibold text-white">Tentang Kami</h3>
+        <p class="mt-2 text-slate-300">Toko Alat Musik terbaik dengan kualitas terjamin.</p>
       </div>
-    </footer>
+      <div>
+        <h3 class="text-lg font-semibold text-white">Layanan</h3>
+        <ul class="mt-2 text-slate-300">
+          <li><a href="about-us.html" class="hover:text-amber-400">Tentang Kami</a></li>
+          <li><a href="term.html" class="hover:text-amber-400">Panduan Belanja</a></li>
+          <li><a href="privacy.html" class="hover:text-amber-400">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-white">Hubungi Kami</h3>
+        <ul class="mt-2 text-slate-300">
+          <li>Email: info@tokomusik.com</li>
+          <li>Telepon: +62123456789</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-white">Ikuti Kami</h3>
+        <div class="mt-2 flex space-x-4">
+          <a href="https://facebook.com" class="text-slate-300 hover:text-amber-400">Facebook</a>
+          <a href="https://twitter.com" class="text-slate-300 hover:text-amber-400">Twitter</a>
+          <a href="https://instagram.com" class="text-slate-300 hover:text-amber-400">Instagram</a>            
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+      <div class="bg-white rounded-lg p-6 w-96 shadow-xl">
+        <div class="text-center">
+          <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+            <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mt-3">Transaksi Berhasil!</h3>
+          <div class="mt-2">
+            <p class="text-sm text-gray-500">
+              Pembayaran Anda telah berhasil diproses. Detail transaksi telah dikirim ke email Anda.
+            </p>
+          </div>
+          <div class="mt-4">
+            <button
+              type="button"
+              onclick="closeSuccessModal()"
+              class="w-full bg-amber-400 text-white py-2 rounded hover:bg-amber-500 transition"
+            >
+              Kembali ke Beranda
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+      function processPayment() {
+        // Here you would normally process the payment
+        // For demo purposes, we'll just show the success modal
+        document.getElementById('successModal').classList.remove('hidden');
+        
+        // Prevent form submission (since we're just demoing the modal)
+        return false;
+      }
+
+      function closeSuccessModal() {
+        document.getElementById('successModal').classList.add('hidden');
+        // Redirect to home page or wherever you want
+        window.location.href = "index.html";
+      }
+
+      // Prevent form submission when pressing enter
+      document.getElementById('paymentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        processPayment();
+      });
+    </script>
   </body>
 </html>

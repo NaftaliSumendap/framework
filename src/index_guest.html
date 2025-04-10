@@ -13,12 +13,12 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
               <div class="flex items-center">
-                  <a href="index_guest.html" class="text-2xl font-bold text-gray-800">Toko Alat Musik</a>
+                  <a href="#" class="text-2xl font-bold text-gray-800">Toko Alat Musik</a>
               </div>
               <div class="flex-1 mx-4 max-w-lg">
                   <div class="relative">
-                      <input type="text" placeholder="Cari alat musik..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                      <button class="absolute right-0 top-0 mt-2 mr-3 text-gray-500 hover:text-blue-500">
+                      <input type="text" placeholder="Cari alat musik..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" />
+                      <button class="absolute right-0 top-0 mt-2 mr-3 text-gray-500 hover:text-amber-400">
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/></svg>
                     </button>
                   </div>
@@ -26,7 +26,6 @@
               <div class="flex items-center space-x-4">
                 <a href="sign-in.html" class="text-gray-800 hover:text-amber-400">Masuk</a>
                 <a href="sign-up.html" class="text-gray-800 hover:text-amber-400">Daftar</a>
-                  <a href="cart.html" class="text-gray-800 hover:text-amber-400">Keranjang</a>
               </div>
           </div>
       </div>
@@ -70,181 +69,100 @@
             </div>
         </div>
 
-        <!-- Featured Products -->
-        <div class="container mx-auto px-6 py-8">
-          <h2 class="text-2xl font-bold text-gray-800 text-center">Produk Unggulan</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-                <a href="detail.html" class="block bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <img src="../image/gitar2.jpg" alt="Gitar Akustik" class="w-full h-48 object-cover rounded-lg mx-auto">
-                    <h3 class="text-lg text-gray-800 mt-4 truncate">Gitar Akustik Yamaha C40</h3>
-                    <p class="mt-1 text-black font-bold">Rp 1.500.000</p>
-                    <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-                </a>
-              <div class="bg-white rounded-lg shadow-md p-6">
-                  <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-                  <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-                  <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-                  <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-              </div>
-              <div class="bg-white rounded-lg shadow-md p-6">
-                  <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-                  <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-                  <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-                  <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-              </div>
-              <div class="bg-white rounded-lg shadow-md p-6">
-                  <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-                  <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-                  <p class="mt-1 text-black font-bold">Rp 500.000</p>
-                  <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-              </div>
-        <!-- Hanya tambahan -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-                <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+    <!-- Konten Utama -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <h2 class="text-2xl font-bold text-gray-800 text-center pb-4">Produk Unggulan</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+        <!-- Produk Card -->
+        <div class="bg-white rounded shadow hover:shadow-md transition p-4 w-full">
+            <!-- Link ke product.html -->
+            <a href="detail.html">
+            <div class="relative w-full h-64">
+                <img src="../image/gitar.jpg" alt="Produk" class="w-full h-full object-cover rounded">
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-                <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+            <!-- Konten Produk -->
+            <p class="mt-2 text-sm font-medium line-clamp-2">Gitar Yamaha</p>
+            <p class="text-red-600 font-bold text-sm mt-1">Rp 1.800.000</p>
+            <div class="flex flex-col mt-1 text-xs text-gray-500 space-y-0.5">
+                <span class="text-yellow-500">★ 4.6 | 20 Terjual</span>
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-                <p class="mt-1 text-black font-bold">Rp 500.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-              <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-              <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-              <p class="mt-1 text-black font-bold">Rp 500.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-            <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-            <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-            <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+            </a>
+            <!-- Tombol Tambahkan tetap di luar <a> -->
+            <button class="mt-2 text-xs bg-amber-400 text-black px-5 py-2 rounded hover:bg-yellow-300">
+            Tambahkan
+            </button>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6">
-            <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-            <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-            <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-            <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+  
+        <div class="bg-white rounded shadow hover:shadow-md transition p-4 w-full">
+            <!-- Link ke product.html -->
+            <a href="detail.html">
+            <div class="relative w-full h-64">
+                <img src="../image/Fender Starcaster.jpeg" alt="Produk" class="w-full h-full object-cover rounded">
+            </div>
+            <!-- Konten Produk -->
+            <p class="mt-2 text-sm font-medium line-clamp-2">Gitar Listrik Yamaha</p>
+            <p class="text-red-600 font-bold text-sm mt-1">Rp 1.800.000</p>
+            <div class="flex flex-col mt-1 text-xs text-gray-500 space-y-0.5">
+                <span class="text-yellow-500">★ 4.6 | 20 Terjual</span>
+            </div>
+            </a>
+            <!-- Tombol Tambahkan tetap di luar <a> -->
+            <button class="mt-2 text-xs bg-amber-400 text-black px-5 py-2 rounded hover:bg-yellow-300">
+            Tambahkan
+            </button>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6">
-            <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-            <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-            <p class="mt-1 text-black font-bold">Rp 500.000</p>
-            <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+
+        <div class="bg-white rounded shadow hover:shadow-md transition p-4 w-full">
+            <!-- Link ke product.html -->
+            <a href="detail.html">
+            <div class="relative w-full h-64">
+                <img src="../image/Fender Starcaster.jpeg" alt="Produk" class="w-full h-full object-cover rounded">
+            </div>
+            <!-- Konten Produk -->
+            <p class="mt-2 text-sm font-medium line-clamp-2">Gitar Listrik Yamaha</p>
+            <p class="text-red-600 font-bold text-sm mt-1">Rp 1.800.000</p>
+            <div class="flex flex-col mt-1 text-xs text-gray-500 space-y-0.5">
+                <span class="text-yellow-500">★ 4.6 | 20 Terjual</span>
+            </div>
+            </a>
+            <!-- Tombol Tambahkan tetap di luar <a> -->
+            <button class="mt-2 text-xs bg-amber-400 text-black px-5 py-2 rounded hover:bg-yellow-300">
+            Tambahkan
+            </button>
         </div>
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-                <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+
+            <div class="bg-white rounded shadow hover:shadow-md transition p-4 w-full">
+                <div class="relative w-full h-64">
+                    <img src="../image/Fender Starcaster.jpeg" alt="Produk" class="w-full h-full object-cover rounded">
+                </div>
+                <!-- Konten Produk -->
+                <p class="mt-2 text-sm font-medium line-clamp-2">Gitar Listrik Yamaha</p>
+                <p class="text-red-600 font-bold text-sm mt-1">Rp 1.800.000</p>
+                <div class="flex flex-col mt-1 text-xs text-gray-500 space-y-0.5">
+                    <span class="text-yellow-500">★ 4.6 | 20 Terjual</span>
+                </div>
+                <button class="mt-2 text-xs bg-amber-400 text-black px-5 py-2 rounded hover:bg-yellow-300">
+                    Tambahkan
+                </button>
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-                <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+
+            <div class="bg-white rounded shadow hover:shadow-md transition p-4 w-full">
+                <div class="relative w-full h-64">
+                    <img src="../image/Fender Starcaster.jpeg" alt="Produk" class="w-full h-full object-cover rounded">
+                </div>
+                <!-- Konten Produk -->
+                <p class="mt-2 text-sm font-medium line-clamp-2">Gitar Listrik Yamaha</p>
+                <p class="text-red-600 font-bold text-sm mt-1">Rp 1.800.000</p>
+                <div class="flex flex-col mt-1 text-xs text-gray-500 space-y-0.5">
+                    <span class="text-yellow-500">★ 4.6 | 20 Terjual</span>
+                </div>
+                <button class="mt-2 text-xs bg-amber-400 text-black px-5 py-2 rounded hover:bg-yellow-300">
+                    Tambahkan
+                </button>
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-                <p class="mt-1 text-black font-bold">Rp 500.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-              <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-              <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-              <p class="mt-1 text-black font-bold">Rp 500.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-                      <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-                <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-                <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-                <p class="mt-1 text-black font-bold">Rp 500.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-                        <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-                <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-                <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-                <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-                <p class="mt-1 text-black font-bold">Rp 500.000</p>
-                <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/piano2.jpg" alt="Piano Digital" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Piano Digital Yamaha PSR S900</h3>
-              <p class="mt-1 text-black font-bold">Rp 10.000.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/drum2.jpg" alt="Drum Set" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Drum Set Pearl Export Series</h3>
-              <p class="mt-1 text-black font-bold">Rp 15.000.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../image/angklung2.jpg" alt="Angklung" class="w-full h-48 object-cover rounded-lg mx-auto">
-              <h3 class="text-lg text-gray-800 mt-4 truncate">Angklung Tradisional Sunda</h3>
-              <p class="mt-1 text-black font-bold">Rp 500.000</p>
-              <button class="mt-4 px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
-          </div>
-          </div>
         </div>
+    </div>
+
 
 <!-- Footer -->
 <footer class="bg-slate-800 shadow-md mt-8">
@@ -280,6 +198,5 @@
       </div>
     </div>
 </footer>
-  
 </body>
 </html>
