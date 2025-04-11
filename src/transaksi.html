@@ -7,37 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800"
-              >Toko Alat Musik</a
-            >
-          </div>
-          <div class="flex items-center space-x-4">
-            <a href="chat.html" class="text-gray-800 hover:text-amber-400">
-              <i class="bx bx-message-dots text-xl"></i>
-            </a>
-            <a href="cart.html" class="text-gray-800 hover:text-amber-400">
-              <i class="bx bx-cart text-xl"></i>
-            </a>
-            <a href="profil.html" class="flex items-center space-x-2 group">
-              <span
-                class="text-gray-800 font-medium group-hover:text-amber-400 transition"
-                >Andro Lay</span
-              >
-              <img
-                src="../image/Foto Almamater Andro.png"
-                alt="Profile"
-                class="w-9 h-9 rounded-full object-cover border-2 border-gray-300 group-hover:border-amber-400"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- Navbar User -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Konten -->
     <main class="pt-20 pb-12 px-4 md:px-10">
@@ -80,25 +51,24 @@
           <div class="flex items-center justify-between border-b pb-4">
             <div class="flex items-center space-x-4">
               <img
-                src="../image/drum.jpg"
-                alt="Drum"
+                src="../image/gitar.jpg"
+                alt="Gitar"
                 class="w-20 h-20 object-cover rounded border"
               />
               <div>
                 <h3 class="font-semibold text-gray-700">
-                  Drum Set Pearl Export
+                  Gitar Akustik Yamaha C40
                 </h3>
                 <p class="text-sm text-gray-500">Jumlah: 1</p>
               </div>
             </div>
-            <p class="font-bold text-gray-800">Rp 15.000.000</p>
+            <p class="font-bold text-gray-800">Rp 1.500.000</p>
           </div>
-        </div>
 
         <!-- Total -->
         <div class="flex justify-between items-center mt-6 border-t pt-4">
           <h4 class="text-lg font-semibold text-gray-700">Total Pembayaran</h4>
-          <p class="text-xl font-bold text-amber-500">Rp 16.500.000</p>
+          <p class="text-xl font-bold text-amber-500">Rp 3.000.000</p>
         </div>
 
         <!-- Form Pembayaran -->
@@ -259,6 +229,28 @@
         e.preventDefault();
         processPayment();
       });
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          const navbarDiv = document.getElementById("navbar-placeholder");
+          navbarDiv.innerHTML = data;
+
+          // Setelah navbar dimuat, jalankan fungsi toggle
+          attachNavbarEvents();
+        });
+
+      function attachNavbarEvents() {
+        const toggleBtn = document.getElementById("toggleMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (toggleBtn && mobileMenu) {
+          toggleBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        } else {
+          console.warn("Element toggleMenu atau mobileMenu tidak ditemukan");
+        }
+      }
     </script>
   </body>
 </html>
