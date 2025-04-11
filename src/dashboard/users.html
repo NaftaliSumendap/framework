@@ -12,7 +12,10 @@
   </head>
   <body class="bg-gray-100 font-sans text-gray-800">
     <!-- Add User Modal -->
-    <div id="addUserModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div
+      id="addUserModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+    >
       <div class="bg-white rounded-lg p-6 w-full max-w-md">
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold">Tambah Pengguna Baru</h3>
@@ -23,30 +26,52 @@
         <form>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Profil Pengguna</label>
-            <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+            <div
+              class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center"
+            >
               <i class="bx bx-user text-4xl text-gray-400 mb-2"></i>
-              <p class="text-gray-500">Drag & drop gambar atau klik untuk memilih</p>
-              <input type="file" class="hidden" id="userImage">
-              <button type="button" onclick="document.getElementById('userImage').click()" class="mt-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm">
+              <p class="text-gray-500">
+                Drag & drop gambar atau klik untuk memilih
+              </p>
+              <input type="file" class="hidden" id="userImage" />
+              <button
+                type="button"
+                onclick="document.getElementById('userImage').click()"
+                class="mt-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm"
+              >
                 Pilih Gambar
               </button>
             </div>
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Username</label>
-            <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Masukkan username">
+            <input
+              type="text"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+              placeholder="Masukkan username"
+            />
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Nama Lengkap</label>
-            <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Masukkan nama lengkap">
+            <input
+              type="text"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+              placeholder="Masukkan nama lengkap"
+            />
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Email</label>
-            <input type="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Masukkan email">
+            <input
+              type="email"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+              placeholder="Masukkan email"
+            />
           </div>
           <div class="mb-6">
             <label class="block text-gray-700 mb-2">Role</label>
-            <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <select
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+            >
               <option value="">Pilih Role</option>
               <option value="admin">Admin</option>
               <option value="user">User</option>
@@ -55,18 +80,36 @@
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Password</label>
-            <input type="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Masukkan password">
+            <input
+              type="password"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+              placeholder="Masukkan password"
+            />
           </div>
           <div class="flex justify-end space-x-3">
-            <button type="button" id="cancelAdd" class="px-4 py-2 border rounded-lg hover:bg-gray-100">Batal</button>
-            <button type="submit" class="px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Tambahkan</button>
+            <button
+              type="button"
+              id="cancelAdd"
+              class="px-4 py-2 border rounded-lg hover:bg-gray-100"
+            >
+              Batal
+            </button>
+            <button
+              type="submit"
+              class="px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500"
+            >
+              Tambahkan
+            </button>
           </div>
         </form>
       </div>
     </div>
 
     <!-- Edit User Modal -->
-    <div id="editUserModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div
+      id="editUserModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+    >
       <div class="bg-white rounded-lg p-6 w-full max-w-md">
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold">Edit Pengguna</h3>
@@ -77,63 +120,128 @@
         <form>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Profil Pengguna</label>
-            <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
-              <img src="../../image/Foto Almamater Andro.png" alt="Current User" class="mx-auto mb-2 h-20 w-20 rounded-full object-cover">
-              <p class="text-gray-500">Drag & drop gambar baru atau klik untuk memilih</p>
-              <input type="file" class="hidden" id="editUserImage">
-              <button type="button" onclick="document.getElementById('editUserImage').click()" class="mt-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm">
+            <div
+              class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center"
+            >
+              <img
+                src="../../image/Foto Almamater Andro.png"
+                alt="Current User"
+                class="mx-auto mb-2 h-20 w-20 rounded-full object-cover"
+              />
+              <p class="text-gray-500">
+                Drag & drop gambar baru atau klik untuk memilih
+              </p>
+              <input type="file" class="hidden" id="editUserImage" />
+              <button
+                type="button"
+                onclick="document.getElementById('editUserImage').click()"
+                class="mt-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm"
+              >
                 Pilih Gambar Baru
               </button>
             </div>
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Username</label>
-            <input type="text" value="admin123" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <input
+              type="text"
+              value="admin123"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Nama Lengkap</label>
-            <input type="text" value="Admin Utama" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <input
+              type="text"
+              value="Admin Utama"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 mb-2">Email</label>
-            <input type="email" value="admin@example.com" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <input
+              type="email"
+              value="admin@example.com"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
           </div>
           <div class="mb-6">
             <label class="block text-gray-700 mb-2">Role</label>
-            <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <select
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+            >
               <option value="admin" selected>Admin</option>
               <option value="user">User</option>
               <option value="guest">Guest</option>
             </select>
           </div>
           <div class="mb-4">
-            <label class="block text-gray-700 mb-2">Password (biarkan kosong jika tidak ingin mengubah)</label>
-            <input type="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Masukkan password baru">
+            <label class="block text-gray-700 mb-2"
+              >Password (biarkan kosong jika tidak ingin mengubah)</label
+            >
+            <input
+              type="password"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+              placeholder="Masukkan password baru"
+            />
           </div>
           <div class="flex justify-end space-x-3">
-            <button type="button" id="cancelEdit" class="px-4 py-2 border rounded-lg hover:bg-gray-100">Batal</button>
-            <button type="submit" class="px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500">Simpan Perubahan</button>
+            <button
+              type="button"
+              id="cancelEdit"
+              class="px-4 py-2 border rounded-lg hover:bg-gray-100"
+            >
+              Batal
+            </button>
+            <button
+              type="submit"
+              class="px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-500"
+            >
+              Simpan Perubahan
+            </button>
           </div>
         </form>
       </div>
     </div>
 
     <!-- Delete Confirmation Modal -->
-    <div id="deleteUserModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div
+      id="deleteUserModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+    >
       <div class="bg-white rounded-lg p-6 w-full max-w-md">
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold">Hapus Pengguna</h3>
-          <button id="closeDeleteModal" class="text-gray-500 hover:text-gray-700">
+          <button
+            id="closeDeleteModal"
+            class="text-gray-500 hover:text-gray-700"
+          >
             <i class="bx bx-x text-2xl"></i>
           </button>
         </div>
         <div class="mb-6">
-          <p class="text-gray-700">Apakah Anda yakin ingin menghapus pengguna <span class="font-semibold">"admin123"</span>?</p>
-          <p class="text-red-500 mt-2 text-sm">Aksi ini tidak dapat dibatalkan!</p>
+          <p class="text-gray-700">
+            Apakah Anda yakin ingin menghapus pengguna
+            <span class="font-semibold">"admin123"</span>?
+          </p>
+          <p class="text-red-500 mt-2 text-sm">
+            Aksi ini tidak dapat dibatalkan!
+          </p>
         </div>
         <div class="flex justify-end space-x-3">
-          <button type="button" id="cancelDelete" class="px-4 py-2 border rounded-lg hover:bg-gray-100">Batal</button>
-          <button type="button" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Hapus Pengguna</button>
+          <button
+            type="button"
+            id="cancelDelete"
+            class="px-4 py-2 border rounded-lg hover:bg-gray-100"
+          >
+            Batal
+          </button>
+          <button
+            type="button"
+            class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+          >
+            Hapus Pengguna
+          </button>
         </div>
       </div>
     </div>
@@ -186,28 +294,33 @@
       <!-- Main Content -->
       <div class="flex-1">
         <!-- Navbar -->
-        <nav class="flex justify-between items-center bg-gray-50 p-4 shadow">
+        <nav
+          class="flex justify-between items-center bg-gray-50 p-4 shadow relative"
+        >
           <i id="toggleSidebar" class="bx bx-menu text-xl cursor-pointer"></i>
-          <form
-            class="flex items-center bg-gray-100 rounded-full overflow-hidden"
-          >
-            <input
-              type="text"
-              class="px-4 py-2 bg-transparent outline-none"
-              placeholder="Search..."
-            />
-            <button class="bg-amber-400 text-white px-4 py-2">
-              <i class="bx bx-search"></i>
-            </button>
-          </form>
+          <div class="relative flex items-center w-full max-w-lg">
+            <form action="search.html" method="GET" class="w-full">
+              <div class="relative">
+                <input
+                  type="text"
+                  name="query"
+                  placeholder="Cari alat musik..."
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+                />
+                <button
+                  type="submit"
+                  class="absolute right-0 top-0 mt-2 mr-3 text-gray-500 hover:text-amber-400"
+                >
+                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
           <div class="flex items-center space-x-4">
-            <a href="#" class="relative">
-              <i class="bx bxs-bell text-xl"></i>
-              <span
-                class="absolute -top-2 -right-2 text-xs bg-amber-400 text-white rounded-full w-5 h-5 flex items-center justify-center"
-                >3</span
-              >
-            </a>
             <img
               src="../../image/Foto Almamater Andro.png"
               class="w-9 h-9 rounded-full"
@@ -256,13 +369,20 @@
               <tbody>
                 <tr class="border-b hover:bg-gray-50">
                   <td class="py-2">
-                    <img src="../../image/Foto Almamater Andro.png" class="w-8 h-8 rounded-full object-cover" alt="Profile">
+                    <img
+                      src="../../image/Foto Almamater Andro.png"
+                      class="w-8 h-8 rounded-full object-cover"
+                      alt="Profile"
+                    />
                   </td>
                   <td>admin123</td>
                   <td>Admin Utama</td>
                   <td>admin@example.com</td>
                   <td>
-                    <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Admin</span>
+                    <span
+                      class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full"
+                      >Admin</span
+                    >
                   </td>
                   <td class="space-x-2">
                     <button
@@ -287,7 +407,10 @@
                   <td>Pengguna Biasa</td>
                   <td>user@example.com</td>
                   <td>
-                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">User</span>
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                      >User</span
+                    >
                   </td>
                   <td class="space-x-2">
                     <button
@@ -312,7 +435,10 @@
                   <td>Tamu</td>
                   <td>guest@example.com</td>
                   <td>
-                    <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Guest</span>
+                    <span
+                      class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full"
+                      >Guest</span
+                    >
                   </td>
                   <td class="space-x-2">
                     <button
@@ -344,81 +470,81 @@
         });
 
       // Modal functionality
-      const addModal = document.getElementById('addUserModal');
-      const editModal = document.getElementById('editUserModal');
-      const deleteModal = document.getElementById('deleteUserModal');
-      
+      const addModal = document.getElementById("addUserModal");
+      const editModal = document.getElementById("editUserModal");
+      const deleteModal = document.getElementById("deleteUserModal");
+
       // Add User Modal
-      const openAddBtn = document.getElementById('openAddUser');
-      const closeAddBtn = document.getElementById('closeAddModal');
-      const cancelAddBtn = document.getElementById('cancelAdd');
+      const openAddBtn = document.getElementById("openAddUser");
+      const closeAddBtn = document.getElementById("closeAddModal");
+      const cancelAddBtn = document.getElementById("cancelAdd");
 
-      openAddBtn.addEventListener('click', () => {
-        addModal.classList.remove('hidden');
+      openAddBtn.addEventListener("click", () => {
+        addModal.classList.remove("hidden");
       });
 
-      closeAddBtn.addEventListener('click', () => {
-        addModal.classList.add('hidden');
+      closeAddBtn.addEventListener("click", () => {
+        addModal.classList.add("hidden");
       });
 
-      cancelAddBtn.addEventListener('click', () => {
-        addModal.classList.add('hidden');
+      cancelAddBtn.addEventListener("click", () => {
+        addModal.classList.add("hidden");
       });
 
       // Edit User Modal
-      const editButtons = document.querySelectorAll('.edit-btn');
-      const closeEditBtn = document.getElementById('closeEditModal');
-      const cancelEditBtn = document.getElementById('cancelEdit');
+      const editButtons = document.querySelectorAll(".edit-btn");
+      const closeEditBtn = document.getElementById("closeEditModal");
+      const cancelEditBtn = document.getElementById("cancelEdit");
 
-      editButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const username = button.getAttribute('data-user');
+      editButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const username = button.getAttribute("data-user");
           // In a real app, you would fetch the user data here
-          editModal.classList.remove('hidden');
+          editModal.classList.remove("hidden");
         });
       });
 
-      closeEditBtn.addEventListener('click', () => {
-        editModal.classList.add('hidden');
+      closeEditBtn.addEventListener("click", () => {
+        editModal.classList.add("hidden");
       });
 
-      cancelEditBtn.addEventListener('click', () => {
-        editModal.classList.add('hidden');
+      cancelEditBtn.addEventListener("click", () => {
+        editModal.classList.add("hidden");
       });
 
       // Delete User Modal
-      const deleteButtons = document.querySelectorAll('.delete-btn');
-      const closeDeleteBtn = document.getElementById('closeDeleteModal');
-      const cancelDeleteBtn = document.getElementById('cancelDelete');
+      const deleteButtons = document.querySelectorAll(".delete-btn");
+      const closeDeleteBtn = document.getElementById("closeDeleteModal");
+      const cancelDeleteBtn = document.getElementById("cancelDelete");
 
-      deleteButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const username = button.getAttribute('data-user');
+      deleteButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const username = button.getAttribute("data-user");
           // Update the username in the delete confirmation
-          const deleteText = deleteModal.querySelector('span');
+          const deleteText = deleteModal.querySelector("span");
           deleteText.textContent = `"${username}"`;
-          deleteModal.classList.remove('hidden');
+          deleteModal.classList.remove("hidden");
         });
       });
 
-      closeDeleteBtn.addEventListener('click', () => {
-        deleteModal.classList.add('hidden');
+      closeDeleteBtn.addEventListener("click", () => {
+        deleteModal.classList.add("hidden");
       });
 
-      cancelDeleteBtn.addEventListener('click', () => {
-        deleteModal.classList.add('hidden');
+      cancelDeleteBtn.addEventListener("click", () => {
+        deleteModal.classList.add("hidden");
       });
 
       // Close modals when clicking outside
-      window.addEventListener('click', (e) => {
+      window.addEventListener("click", (e) => {
         if (e.target === addModal) {
-          addModal.classList.add('hidden');
+          addModal.classList.add("hidden");
         }
         if (e.target === editModal) {
-          editModal.classList.add('hidden');
+          editModal.classList.add("hidden");
         }
         if (e.target === deleteModal) {
-          deleteModal.classList.add('hidden');
+          deleteModal.classList.add("hidden");
         }
       });
     </script>
