@@ -193,10 +193,8 @@
   </div>
 </main>
 
-<!-- Footer -->
-<footer class="bg-slate-800 shadow-md">
-  <!-- ... (kode footer sama seperti sebelumnya) ... -->
-</footer>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
 
 <script>
   // Update progress bar based on current step
@@ -248,6 +246,26 @@
           console.warn("Element toggleMenu atau mobileMenu tidak ditemukan");
         }
       }
+
+  // Fungsi untuk memuat footer
+  function loadFooter() {
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+        document.getElementById('footer-placeholder').innerHTML = `
+          <footer class="bg-slate-800 text-white text-center p-4">
+            <p>© ${new Date().getFullYear()} Toko Alat Musik</p>
+          </footer>
+        `;
+      });
+  }
+
+  // Panggil fungsi saat halaman selesai dimuat
+  document.addEventListener('DOMContentLoaded', loadFooter);
 </script>
 </body>
 </html>

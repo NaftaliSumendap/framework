@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kebijakan Privasi - Toko Alat Musik</title>
+    <title>Kebijakan Privasi - SounDeal</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
@@ -146,39 +146,29 @@
         </div>
     </div>
 
-<!-- Footer -->
-<footer class="bg-slate-800 shadow-md mt-8">
-    <div class="container mx-auto px-6 py-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <div>
-          <h3 class="text-lg font-semibold text-white">Tentang Kami</h3>
-          <p class="mt-2 text-slate-300">Toko Alat Musik terbaik dengan kualitas terjamin.</p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-white">Layanan</h3>
-          <ul class="mt-2 text-slate-300">
-            <li><a href="about-us.html" class="hover:text-amber-400">Tentang Kami</a></li>
-            <li><a href="term.html" class="hover:text-amber-400">Panduan Belanja</a></li>
-            <li><a href="privacy.html" class="hover:text-amber-400">Kebijakan Privasi</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-white">Hubungi Kami</h3>
-          <ul class="mt-2 text-slate-300">
-            <li>Email: info@tokomusik.com</li>
-            <li>Telepon: +62123456789</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-white">Ikuti Kami</h3>
-          <div class="mt-2 flex space-x-4">
-            <a href="https://facebook.com" class="text-slate-300 hover:text-amber-400">Facebook</a>
-            <a href="https://twitter.com" class="text-slate-300 hover:text-amber-400">Twitter</a>
-            <a href="https://instagram.com" class="text-slate-300 hover:text-amber-400">Instagram</a>            
-          </div>
-        </div>
-      </div>
-    </div>
-</footer>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+<script>
+  // Fungsi untuk memuat footer
+  function loadFooter() {
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+        document.getElementById('footer-placeholder').innerHTML = `
+          <footer class="bg-slate-800 text-white text-center p-4">
+            <p>© ${new Date().getFullYear()} Toko Alat Musik</p>
+          </footer>
+        `;
+      });
+  }
+
+  // Panggil fungsi saat halaman selesai dimuat
+  document.addEventListener('DOMContentLoaded', loadFooter);
+</script>
 </body>
 </html>
